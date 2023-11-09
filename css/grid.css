@@ -1,0 +1,17 @@
+/* Estilos para la sección "Sobre Nosotros" */
+.sobre-nosotros-contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px;
+    align-items: center;
+}
+
+.sobre-nosotros-imagen img {
+    max-width: 100%;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
