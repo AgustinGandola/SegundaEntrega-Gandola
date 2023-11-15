@@ -22,7 +22,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to right,rgb(0 0 0/ .5),rgb(0 0 0/ .5)),url(/img/Cortinaroller);
+    background: linear-gradient(to right,rgb(0 0 0/ .5),rgb(0 0 0/ .5)),url(/img/Cortinaroller01.jpg);
     background-size: cover;
     background-position: center;
 }
