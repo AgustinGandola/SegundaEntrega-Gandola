@@ -15,6 +15,13 @@ header {
     height: 50px;
 }
 
+
+@media only screen and (max-width: 600px) {
+    nav {
+        display: none; 
+    }
+
+}
 /*imagen principal*/
 .wrap{
     width: 98.8vw;
@@ -22,13 +29,13 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to right,rgb(0 0 0/ .5),rgb(0 0 0/ .5)),url(/img/Cortinaroller01.jpg);
+    background: linear-gradient(to right,rgb(0 0 0/ .5),rgb(0 0 0/ .5)),url(/img/Cortina-Roller-banner.jpg);
     background-size: cover;
     background-position: center;
 }
 
 .wrap-texto{
-    color: #ffffff;
+    color: #000000;
     text-align: center;
     width: 50%;
 }
@@ -41,6 +48,10 @@ header {
 .logo {
     display: flex;
     align-items: center;
+}
+
+.nombre-empresa {
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .logo img {
@@ -61,30 +72,26 @@ a {
     color: #fff;
 }
 
-/*imagen secundaria*/
+/*video secundaria*/
 
-.imagen-roller{
-    width: 1000px;
-    height: 500px;
-
+.vdo {
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 50px;
+    background-color: rgba(177, 180, 192, 0.31);
+    margin: 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    display: flex;
 }
 
 .contenedor{
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
 }
 
-.txt{
-    margin-left: 50px;
-    margin-right: 50px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 50px;
-    background-color: #c0b1b14f;
-    margin: 50px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
+
 
 /* Estilos de las secciones */
 section {
@@ -118,21 +125,25 @@ footer {
 .inicio-titulo {
     font-size: 32px;
     margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .inicio-subtitulo {
     font-size: 24px;
     margin-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .inicio-lista {
     list-style-type: disc;
     margin-left: 20px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .inicio-texto {
     font-size: 18px;
     margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .boton-contacto {
@@ -152,14 +163,15 @@ footer {
 /* Estilos para el formulario de contacto */
 
 .login-form{
-    width: 28%;
+    width: auto;
     margin: 0% auto;
-    background: url(/img/Cortinas-Roller-BlackOut.jpg)no-repeat 0px 0px;
+    background: url(/img/Cortinas-Roller-BlackOut.jpg)no-repeat 0px 0px;    flex-direction: row;    align-items: center;
     background-size: cover;
     background-position: center;
     padding: 100px 500px 63px;
-}
+    display: flex;
 
+}
 
 .contacto form {
     background-color: #c2bcbc;
@@ -212,4 +224,116 @@ footer {
     height: 100vh;
     display: flex;
     justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.item {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    border: 2px solid #ddd; 
+    border-radius: 8px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    color:black
+}
+
+.item:hover {
+    transform: scale(1.1);
+}
+
+.item img {
+    width: 200px; 
+    height: 150px; 
+    max-width: 100%;
+    height: auto;
+}
+
+.item p {
+    margin: 10px 0;
+}
+
+/*Productos*/
+
+#productos {
+    text-align: center;
+    padding: 20px;
+}
+
+.product-container {
+    margin-top: 20px;
+}
+
+.product {
+    text-align: center;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto 20px; 
+}
+
+.product-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.product img {
+    width: 30%; 
+    height: auto;
+    display: block;
+}
+
+.product p {
+    margin: 10px;
+    text-align: left;
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.boton-presupuesto {
+    display: inline-flex;
+    padding: 10px 20px;
+    background-color: #acb1ac; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.boton-presupuesto:hover {
+    background-color: #98a098;
+}
+
+/*Estilo soluciones*/
+
+.soluciones {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.solucion {
+    width: 48%;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.solucion img {
+    width: 100%; /* Hace que la imagen ocupe el 100% del ancho de su contenedor */
+    max-width: 100%; /* Establece un ancho máximo para la imagen */
+    height: auto; /* Mantiene la proporción original de la imagen */
+}
+
+.descripcion {
+    text-align: center;
+    margin-top: 10px;
 }
