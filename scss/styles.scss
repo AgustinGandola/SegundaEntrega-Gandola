@@ -23,8 +23,141 @@ header {
         nav {
             display: none;
         }
+        
     }
 }
+
+// Estilos para la versión de escritorio
+nav {
+    ul {
+        list-style: none;
+        display: flex;
+    }
+
+    li {
+        margin-right: 20px;
+    }
+}
+
+// Estilos para la versión móvil
+@media only screen and (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        background-color: #333;
+        text-align: center;
+
+        &.show {
+            display: flex;
+        }
+
+        a {
+            padding: 15px;
+            color: #fff;
+            text-decoration: none;
+            display: block;
+        }
+    }
+
+    .burger-menu {
+        display: block;
+        cursor: pointer;
+        margin-top: 15px;
+
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 5px 0;
+        }
+    }
+}
+
+// Estilos para la versión de escritorio
+header {
+    a.logo {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #ffffff; // Color de texto por defecto
+
+        img {
+            margin-right: 10px;
+        }
+
+        h2.nombre-empresa {
+            margin: 0;
+        }
+    }
+
+    nav {
+        ul {
+            list-style: none;
+            display: flex;
+
+            li {
+                margin-right: 20px;
+
+                // Estilo al pasar el mouse por encima
+                &:hover {
+                    a {
+                        color: #000000; 
+                    }
+                }
+            }
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+// Estilos para la versión celular
+@media only screen and (max-width: 768px) {
+    header {
+        nav {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            position: absolute;
+            background-color: #333;
+            text-align: center;
+
+            &.show {
+                display: flex;
+            }
+
+            a {
+                padding: 15px;
+                color: #fff;
+                text-decoration: none;
+                display: block;
+
+                // Estilo al pasar el mouse por encima
+                &:hover {
+                    background-color: #555; 
+                }
+            }
+        }
+
+        .burger-menu {
+            display: block;
+            cursor: pointer;
+            margin-top: 15px;
+
+            .bar {
+                width: 25px;
+                height: 3px;
+                background-color: #fff;
+                margin: 5px 0;
+            }
+        }
+    }
+}
+
 
 .wrap {
     width: 98.8vw;
@@ -168,6 +301,10 @@ footer {
     background-position: center;
     padding: 100px 500px 63px;
     display: flex;
+    @media only screen and (max-width: 768px) {
+        flex-direction: column;
+        padding: 50px 20px 63px; // Ajusta los valores de padding según sea necesario
+    }
 
     .contacto {
         form {
@@ -319,6 +456,14 @@ footer {
         width: 48%;
         margin-bottom: 20px;
         overflow: hidden;
+        text-align: center;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        color: black;
 
         img {
             width: 100%; /* Hace que la imagen ocupe el 100% del ancho de su contenedor */

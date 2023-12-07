@@ -1,4 +1,7 @@
-document.getElementById('hamburguesa').addEventListener('click', function() {
-    var menu = document.querySelector('.menu ul');
-    menu.classList.toggle('mostrar');
-});
+<script>
+function toggleMenu() {
+    console.log('Toggle menu function called'); 
+    const nav = document.querySelector('nav');
+    nav.classList.toggle('show');
+}
+</script>

@@ -20,6 +20,103 @@ header {
   }
 }
 
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav li {
+  margin-right: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    background-color: #333;
+    text-align: center;
+  }
+  nav.show {
+    display: flex;
+  }
+  nav a {
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+  }
+  .burger-menu {
+    display: block;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  .burger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+  }
+}
+header a.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+}
+header a.logo img {
+  margin-right: 10px;
+}
+header a.logo h2.nombre-empresa {
+  margin: 0;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+header nav ul li {
+  margin-right: 20px;
+}
+header nav ul li:hover a {
+  color: #000000;
+}
+header nav a {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+  header nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    background-color: #333;
+    text-align: center;
+  }
+  header nav.show {
+    display: flex;
+  }
+  header nav a {
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+  }
+  header nav a:hover {
+    background-color: #555;
+  }
+  header .burger-menu {
+    display: block;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  header .burger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+  }
+}
 .wrap {
   width: 98.8vw;
   height: 100vh;
@@ -153,6 +250,12 @@ footer {
   padding: 100px 500px 63px;
   display: flex;
 }
+@media only screen and (max-width: 768px) {
+  .login-form {
+    flex-direction: column;
+    padding: 50px 20px 63px;
+  }
+}
 .login-form .contacto form {
   background-color: #c2bcbc;
   border: 1px solid #ddd;
@@ -285,6 +388,14 @@ footer {
   width: 48%;
   margin-bottom: 20px;
   overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: black;
 }
 .soluciones .solucion img {
   width: 100%; /* Hace que la imagen ocupe el 100% del ancho de su contenedor */
