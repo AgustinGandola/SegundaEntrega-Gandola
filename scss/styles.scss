@@ -396,41 +396,54 @@ footer {
 #productos {
     text-align: center;
     padding: 20px;
-
+  
     .product-container {
-        margin-top: 20px;
-
-        .product {
-            text-align: center;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin: 0 auto 20px;
-
-            .product-content {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-
-                img {
-                    width: 30%;
-                    height: auto;
-                    display: block;
-                }
-
-                p {
-                    margin: 10px;
-                    text-align: left;
-                    font-size: 14px;
-                    font-family: Verdana, Geneva, Tahoma, sans-serif;
-                }
-            }
+      margin-top: 20px;
+  
+      .product {
+        text-align: center;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(83, 67, 67, 0.651);
+        margin: 0 auto 20px;
+        transition: box-shadow 0.3s ease-in-out;
+  
+        &:hover {
+          box-shadow: 0 8px 16px rgba(184, 26, 26, 0.726);
         }
+  
+        .product-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+  
+          img {
+            width: 30%;
+            height: auto;
+            display: block;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+          }
+  
+          .text-container {
+            flex-grow: 1;
+            max-height: 200px; // Altura máxima para el contenedor de texto
+            overflow-y: auto; // Agrega scroll vertical si es necesario
+  
+            p {
+              margin: 10px;
+              text-align: left;
+              font-size: 14px;
+              font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+          }
+        }
+      }
     }
-}
+  }
 
-.boton-presupuesto {
+  .boton-presupuesto {
     display: inline-flex;
     padding: 10px 20px;
     background-color: #acb1ac;
@@ -457,23 +470,64 @@ footer {
         margin-bottom: 20px;
         overflow: hidden;
         text-align: center;
-        cursor: pointer;
         transition: transform 0.3s ease-in-out;
         border: 2px solid #ddd;
         border-radius: 8px;
-        overflow: hidden;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         color: black;
+        flex-direction: column;
+        display: flex;
 
         img {
-            width: 100%; /* Hace que la imagen ocupe el 100% del ancho de su contenedor */
-            max-width: 100%; /* Establece un ancho máximo para la imagen */
-            height: auto; /* Mantiene la proporción original de la imagen */
+            width: 100%; 
+            max-width: 100%; /*ancho máximo para la imagen */
+            height: auto; /*proporción original de la imagen */
         }
 
         .descripcion {
-            text-align: center;
-            margin-top: 45px;
-        }
+            padding: 15px;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #333;
+            background-color: #f9f9f9;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+          }
     }
 }
+
+/*redireccion a google*/
+
+.google {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+  
+    p {
+      margin-bottom: 20px;
+      font-size: 16px;
+      color: #333;
+    }
+  
+    a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4285f4;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease-in-out;
+  
+      &:hover {
+        background-color: #b30707;
+      }
+    }
+  }

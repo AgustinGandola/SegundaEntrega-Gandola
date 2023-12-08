@@ -343,8 +343,12 @@ footer {
   border: 2px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(83, 67, 67, 0.651);
   margin: 0 auto 20px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+#productos .product-container .product:hover {
+  box-shadow: 0 8px 16px rgba(184, 26, 26, 0.726);
 }
 #productos .product-container .product .product-content {
   display: flex;
@@ -355,8 +359,15 @@ footer {
   width: 30%;
   height: auto;
   display: block;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
-#productos .product-container .product .product-content p {
+#productos .product-container .product .product-content .text-container {
+  flex-grow: 1;
+  max-height: 200px;
+  overflow-y: auto;
+}
+#productos .product-container .product .product-content .text-container p {
   margin: 10px;
   text-align: left;
   font-size: 14px;
@@ -389,22 +400,58 @@ footer {
   margin-bottom: 20px;
   overflow: hidden;
   text-align: center;
-  cursor: pointer;
   transition: transform 0.3s ease-in-out;
   border: 2px solid #ddd;
   border-radius: 8px;
-  overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   color: black;
+  flex-direction: column;
+  display: flex;
 }
 .soluciones .solucion img {
-  width: 100%; /* Hace que la imagen ocupe el 100% del ancho de su contenedor */
-  max-width: 100%; /* Establece un ancho máximo para la imagen */
-  height: auto; /* Mantiene la proporción original de la imagen */
+  width: 100%;
+  max-width: 100%; /*ancho máximo para la imagen */
+  height: auto; /*proporción original de la imagen */
 }
 .soluciones .solucion .descripcion {
+  padding: 15px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f9f9f9;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/*redireccion a google*/
+.google {
   text-align: center;
-  margin-top: 45px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.google img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+.google p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #333;
+}
+.google a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4285f4;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
+}
+.google a:hover {
+  background-color: #b30707;
 }
 
 /*# sourceMappingURL=styles.css.map */
