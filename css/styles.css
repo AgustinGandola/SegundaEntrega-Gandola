@@ -374,7 +374,6 @@ footer {
 
 .container {
   display: flex;
-  flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
   justify-content: space-around;
   margin-top: 50px;
 }
@@ -387,18 +386,27 @@ footer {
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   color: black;
-  margin: 10px; /* Ajusta el margen según tus preferencias */
 }
 .container .item:hover {
   transform: scale(1.1);
 }
 .container .item img {
-  width: 100%; /* Cambiado para que la imagen sea completamente responsiva */
+  width: 200px;
+  height: 150px;
+  max-width: 100%;
   height: auto;
-  border-radius: 8px 8px 0 0; /* Añadido para esquinas redondeadas en la parte superior */
 }
 .container .item p {
   margin: 10px 0;
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container .item {
+    margin-bottom: 20px;
+  }
 }
 
 /* Productos */
